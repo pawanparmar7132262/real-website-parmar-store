@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>अकाउंट बनाएँ</title>
+  <link rel="stylesheet" href="account.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>अपना अकाउंट बनाएँ</h2>
+    <form id="accountForm">
+      <label for="name">पूरा नाम:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">ईमेल:</label>
+      <input type="email" id="email" required>
+
+      <label for="password">पासवर्ड:</label>
+      <input type="password" id="password" required>
+
+      <button type="submit">रजिस्टर करें</button>
+    </form>
+
+    <p id="successMsg">🎉 आपका अकाउंट सफलतापूर्वक बन गया!</p>
+  </div>
+
+  <script src="account.js" defer></script>
+</body>
+</html>

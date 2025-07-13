@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>real website-parmar store</title>
+  <!-- Google फ़ॉन्ट 👉 देवनागरी हेतु  -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+  // जब पेज खुले, तब बटन का टेक्स्ट सेट करें
+  document.addEventListener('DOMContentLoaded', function () {
+    const isAccountCreated = localStorage.getItem("accountCreated");
+    const accountBtn = document.getElementById("accountBtn");
+
+    if (isAccountCreated === "true") {
+      accountBtn.textContent = "Your Profile";
+    } else {
+      accountBtn.textContent = "Create Account";
+    }
+  });
+
+  // बटन पर क्लिक होने पर कहाँ जाना है
+  function handleAccountClick() {
+    const isAccountCreated = localStorage.getItem("accountCreated");
+
+    if (isAccountCreated === "true") {
+      window.location.href = "setting.html";
+    } else {
+      window.location.href = "account.html";
+    }
+  }
+</script>
+
+</head>
+<body>
+  <!-- Main Content (visible by default) -->
+  <div id="mainContent" style="display:block;">
+    <header>
+      <div class="header-row">
+        <div class="logo"><span class="material-icons">apps</span>real website-parmar store</div>
+        <div class="search-login">
+          <div style="position:relative;display:flex;align-items:center;">
+            <span class="material-icons" style="position:absolute;left:12px;color:#888;font-size:1.3em;pointer-events:none;">search</span>
+            <input id="searchBar" type="text" placeholder="ऐप खोजें…" onkeyup="searchApps()" style="padding-left:2.2em;" />
+          </div>
+         
+  <!-- 👇 यह बटन प्रोफाइल या अकाउंट पेज पर जाएगा -->
+ <button id="accountBtn"
+        onclick="handleAccountClick()"
+        style="background:#fff;border:none;border-radius:8px;padding:0.6rem 1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1);cursor:pointer;">
+  Loading...
+</button>
+
+          <button class="setting-btn" onclick="window.location.href='setting.html'" title="Settings" style="background:#fff;border:none;border-radius:50%;padding:0.5rem;box-shadow:0 2px 6px rgba(0,0,0,0.08);margin-left:0.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+            <span class="material-icons" style="color:#7f53ac;font-size:1.7em;">settings</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+  <main>
+    <section class="ads-section">यहाँ आपके विज्ञापन (Ads) दिखेंगे</section>
+    <section class="grid" id="appGrid">
+      <!-- 👉 Top 200 Most Used Websites (Demo: कुछ प्रमुख वेबसाइट्स के साथ) -->
+      <!-- 🎮 Gaming & Entertainment -->
+      <!-- JavaScript moved to sacript.js -->
+      <article class="card"><img class="app-logo" src="https://store.epicgames.com/favicon.ico" alt="Epic Games logo" /><h2>Epic Games</h2><a class="go-btn" href="https://store.epicgames.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://store.steampowered.com/favicon.ico" alt="Steam logo" /><h2>Steam</h2><a class="go-btn" href="https://store.steampowered.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.roblox.com/favicon.ico" alt="Roblox logo" /><h2>Roblox</h2><a class="go-btn" href="https://www.roblox.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.miniclip.com/favicon.ico" alt="Miniclip logo" /><h2>Miniclip</h2><a class="go-btn" href="https://www.miniclip.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.crazygames.com/favicon.ico" alt="CrazyGames logo" /><h2>CrazyGames</h2><a class="go-btn" href="https://www.crazygames.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.twitch.tv/favicon.ico" alt="Twitch logo" /><h2>Twitch</h2><a class="go-btn" href="https://www.twitch.tv" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.ign.com/favicon.ico" alt="IGN logo" /><h2>IGN</h2><a class="go-btn" href="https://www.ign.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.gamespot.com/favicon.ico" alt="GameSpot logo" /><h2>GameSpot</h2><a class="go-btn" href="https://www.gamespot.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://poki.com/favicon.ico" alt="Poki logo" /><h2>Poki</h2><a class="go-btn" href="https://poki.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://kahoot.com/favicon.ico" alt="Kahoot logo" /><h2>Kahoot</h2><a class="go-btn" href="https://kahoot.com" target="_blank">Come</a></article>
+
+      <!-- 🤖 AI Tools & Platforms -->
+      <article class="card"><img class="app-logo" src="https://chat.openai.com/favicon.ico" alt="ChatGPT logo" /><h2>ChatGPT</h2><a class="go-btn" href="https://chat.openai.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://gemini.google.com/favicon.ico" alt="Google Gemini logo" /><h2>Google Gemini</h2><a class="go-btn" href="https://gemini.google.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://copilot.microsoft.com/favicon.ico" alt="Microsoft Copilot logo" /><h2>Microsoft Copilot</h2><a class="go-btn" href="https://copilot.microsoft.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://claude.ai/favicon.ico" alt="Claude AI logo" /><h2>Claude AI</h2><a class="go-btn" href="https://claude.ai" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.perplexity.ai/favicon.ico" alt="Perplexity AI logo" /><h2>Perplexity AI</h2><a class="go-btn" href="https://www.perplexity.ai" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://quillbot.com/favicon.ico" alt="Quillbot logo" /><h2>Quillbot</h2><a class="go-btn" href="https://quillbot.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.grammarly.com/favicon.ico" alt="Grammarly logo" /><h2>Grammarly</h2><a class="go-btn" href="https://www.grammarly.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.scribbr.com/favicon.ico" alt="Scribbr logo" /><h2>Scribbr</h2><a class="go-btn" href="https://www.scribbr.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://poe.com/favicon.ico" alt="Poe logo" /><h2>Poe</h2><a class="go-btn" href="https://poe.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://writesonic.com/favicon.ico" alt="Writesonic logo" /><h2>Writesonic</h2><a class="go-btn" href="https://writesonic.com" target="_blank">Come</a></article>
+
+      <!-- ☁️ Cloud Storage / File Sharing -->
+      <article class="card"><img class="app-logo" src="https://drive.google.com/favicon.ico" alt="Google Drive logo" /><h2>Google Drive</h2><a class="go-btn" href="https://drive.google.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.dropbox.com/favicon.ico" alt="Dropbox logo" /><h2>Dropbox</h2><a class="go-btn" href="https://www.dropbox.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://wetransfer.com/favicon.ico" alt="WeTransfer logo" /><h2>WeTransfer</h2><a class="go-btn" href="https://wetransfer.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://onedrive.live.com/favicon.ico" alt="OneDrive logo" /><h2>OneDrive</h2><a class="go-btn" href="https://onedrive.live.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://mega.io/favicon.ico" alt="Mega logo" /><h2>Mega</h2><a class="go-btn" href="https://mega.io" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.zippyshare.com/favicon.ico" alt="Zippyshare logo" /><h2>Zippyshare</h2><a class="go-btn" href="https://www.zippyshare.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.pcloud.com/favicon.ico" alt="pCloud logo" /><h2>pCloud</h2><a class="go-btn" href="https://www.pcloud.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.mediafire.com/favicon.ico" alt="MediaFire logo" /><h2>MediaFire</h2><a class="go-btn" href="https://www.mediafire.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://disk.yandex.com/favicon.ico" alt="Yandex Disk logo" /><h2>Yandex Disk</h2><a class="go-btn" href="https://disk.yandex.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.icloud.com/favicon.ico" alt="iCloud logo" /><h2>iCloud</h2><a class="go-btn" href="https://www.icloud.com" target="_blank">Come</a></article>
+
+      <!-- 🎨 Design & Creativity -->
+      <article class="card"><img class="app-logo" src="https://www.figma.com/favicon.ico" alt="Figma logo" /><h2>Figma</h2><a class="go-btn" href="https://www.figma.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.adobe.com/favicon.ico" alt="Adobe Express logo" /><h2>Adobe Express</h2><a class="go-btn" href="https://www.adobe.com/express/" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://pixabay.com/favicon.ico" alt="Pixabay logo" /><h2>Pixabay</h2><a class="go-btn" href="https://pixabay.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://unsplash.com/favicon.ico" alt="Unsplash logo" /><h2>Unsplash</h2><a class="go-btn" href="https://unsplash.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.freepik.com/favicon.ico" alt="Freepik logo" /><h2>Freepik</h2><a class="go-btn" href="https://www.freepik.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.flaticon.com/favicon.ico" alt="Flaticon logo" /><h2>Flaticon</h2><a class="go-btn" href="https://www.flaticon.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.behance.net/favicon.ico" alt="Behance logo" /><h2>Behance</h2><a class="go-btn" href="https://www.behance.net" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://dribbble.com/favicon.ico" alt="Dribbble logo" /><h2>Dribbble</h2><a class="go-btn" href="https://dribbble.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.photopea.com/favicon.ico" alt="Photopea logo" /><h2>Photopea</h2><a class="go-btn" href="https://www.photopea.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://crello.com/favicon.ico" alt="Crello (VistaCreate) logo" /><h2>Crello (VistaCreate)</h2><a class="go-btn" href="https://crello.com" target="_blank">Come</a></article>
+
+      <!-- 💻 Coding & Development -->
+      <article class="card"><img class="app-logo" src="https://github.com/favicon.ico" alt="GitHub logo" /><h2>GitHub</h2><a class="go-btn" href="https://github.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://stackoverflow.com/favicon.ico" alt="Stack Overflow logo" /><h2>Stack Overflow</h2><a class="go-btn" href="https://stackoverflow.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.geeksforgeeks.org/favicon.ico" alt="GeeksforGeeks logo" /><h2>GeeksforGeeks</h2><a class="go-btn" href="https://www.geeksforgeeks.org" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.w3schools.com/favicon.ico" alt="W3Schools logo" /><h2>W3Schools</h2><a class="go-btn" href="https://www.w3schools.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://developer.mozilla.org/favicon.ico" alt="MDN Web Docs logo" /><h2>MDN Web Docs</h2><a class="go-btn" href="https://developer.mozilla.org" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://codepen.io/favicon.ico" alt="Codepen logo" /><h2>Codepen</h2><a class="go-btn" href="https://codepen.io" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://replit.com/favicon.ico" alt="Replit logo" /><h2>Replit</h2><a class="go-btn" href="https://replit.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://code.visualstudio.com/favicon.ico" alt="Visual Studio Code logo" /><h2>Visual Studio Code</h2><a class="go-btn" href="https://code.visualstudio.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.programiz.com/favicon.ico" alt="Programiz logo" /><h2>Programiz</h2><a class="go-btn" href="https://www.programiz.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.hackerrank.com/favicon.ico" alt="Hackerrank logo" /><h2>Hackerrank</h2><a class="go-btn" href="https://www.hackerrank.com" target="_blank">Come</a></article>
+
+      <!-- 🏛️ Government & Services (India) -->
+      <article class="card"><img class="app-logo" src="https://uidai.gov.in/images/favicon.ico" alt="UIDAI Aadhaar logo" /><h2>UIDAI Aadhaar</h2><a class="go-btn" href="https://uidai.gov.in" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.incometax.gov.in/iec/foportal/resources/images/favicon.ico" alt="Income Tax Portal logo" /><h2>Income Tax Portal</h2><a class="go-btn" href="https://www.incometax.gov.in" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.irctc.co.in/nget/assets/images/favicon.ico" alt="IRCTC logo" /><h2>IRCTC</h2><a class="go-btn" href="https://www.irctc.co.in" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.digilocker.gov.in/images/favicon.ico" alt="Digilocker logo" /><h2>Digilocker</h2><a class="go-btn" href="https://www.digilocker.gov.in" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://web.umang.gov.in/images/favicon.ico" alt="Umang logo" /><h2>Umang</h2><a class="go-btn" href="https://web.umang.gov.in" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.bharatbillpay.com/assets/images/favicon.ico" alt="Bharat BillPay logo" /><h2>Bharat BillPay</h2><a class="go-btn" href="https://www.bharatbillpay.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.cowin.gov.in/favicon.ico" alt="Cowin logo" /><h2>Cowin</h2><a class="go-btn" href="https://www.cowin.gov.in" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.npci.org.in/sites/all/themes/npci/favicon.ico" alt="NPCI logo" /><h2>NPCI</h2><a class="go-btn" href="https://www.npci.org.in" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.ncs.gov.in/favicon.ico" alt="NCS (Jobs) logo" /><h2>NCS (Jobs)</h2><a class="go-btn" href="https://www.ncs.gov.in" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.epfindia.gov.in/site_docs/images/favicon.ico" alt="EPFO logo" /><h2>EPFO</h2><a class="go-btn" href="https://www.epfindia.gov.in" target="_blank">Come</a></article>
+
+      <!-- 🌏 Travel, Maps & Booking -->
+      <article class="card"><img class="app-logo" src="https://www.google.com/maps/favicon.ico" alt="Google Maps logo" /><h2>Google Maps</h2><a class="go-btn" href="https://www.google.com/maps" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.makemytrip.com/favicon.ico" alt="MakeMyTrip logo" /><h2>MakeMyTrip</h2><a class="go-btn" href="https://www.makemytrip.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.yatra.com/favicon.ico" alt="Yatra logo" /><h2>Yatra</h2><a class="go-btn" href="https://www.yatra.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.goibibo.com/favicon.ico" alt="Goibibo logo" /><h2>Goibibo</h2><a class="go-btn" href="https://www.goibibo.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.cleartrip.com/favicon.ico" alt="Cleartrip logo" /><h2>Cleartrip</h2><a class="go-btn" href="https://www.cleartrip.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.booking.com/favicon.ico" alt="Booking.com logo" /><h2>Booking.com</h2><a class="go-btn" href="https://www.booking.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.trivago.in/favicon.ico" alt="Trivago logo" /><h2>Trivago</h2><a class="go-btn" href="https://www.trivago.in" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.airbnb.co.in/favicon.ico" alt="Airbnb logo" /><h2>Airbnb</h2><a class="go-btn" href="https://www.airbnb.co.in" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.oyorooms.com/favicon.ico" alt="OYO Rooms logo" /><h2>OYO Rooms</h2><a class="go-btn" href="https://www.oyorooms.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.uber.com/favicon.ico" alt="Uber logo" /><h2>Uber</h2><a class="go-btn" href="https://www.uber.com" target="_blank">Come</a></article>
+
+      <!-- ❤️ Health & Fitness -->
+      <article class="card"><img class="app-logo" src="https://www.1mg.com/favicon.ico" alt="1mg / Tata Health logo" /><h2>1mg / Tata Health</h2><a class="go-btn" href="https://www.1mg.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.netmeds.com/favicon.ico" alt="Netmeds logo" /><h2>Netmeds</h2><a class="go-btn" href="https://www.netmeds.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.practo.com/favicon.ico" alt="Practo logo" /><h2>Practo</h2><a class="go-btn" href="https://www.practo.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.healthline.com/favicon.ico" alt="Healthline logo" /><h2>Healthline</h2><a class="go-btn" href="https://www.healthline.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.webmd.com/favicon.ico" alt="WebMD logo" /><h2>WebMD</h2><a class="go-btn" href="https://www.webmd.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.apollo247.com/favicon.ico" alt="Apollo247 logo" /><h2>Apollo247</h2><a class="go-btn" href="https://www.apollo247.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://pharmeasy.in/favicon.ico" alt="Pharmeasy logo" /><h2>Pharmeasy</h2><a class="go-btn" href="https://pharmeasy.in" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.fittr.com/favicon.ico" alt="Fittr logo" /><h2>Fittr</h2><a class="go-btn" href="https://www.fittr.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.myfitnesspal.com/favicon.ico" alt="MyFitnessPal logo" /><h2>MyFitnessPal</h2><a class="go-btn" href="https://www.myfitnesspal.com" target="_blank">Come</a></article>
+      <article class="card"><img class="app-logo" src="https://www.nike.com/favicon.ico" alt="Nike Training Club logo" /><h2>Nike Training Club</h2><a class="go-btn" href="https://www.nike.com/ntc-app" target="_blank">Come</a></article>
+      <!-- ...existing code... -->
+      <article class="card">
+        <img class="app-logo" src="https://www.google.com/favicon.ico" alt="Google logo" />
+        <h2>Google</h2>
+        <a class="go-btn" href="https://www.google.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.bing.com/sa/simg/favicon-2x.ico" alt="Bing logo" />
+        <h2>Bing</h2>
+        <a class="go-btn" href="https://www.bing.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://s.yimg.com/rz/l/yahoo_en-US_f_p_bestfit_2x.png" alt="Yahoo logo" />
+        <h2>Yahoo</h2>
+        <a class="go-btn" href="https://www.yahoo.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://duckduckgo.com/favicon.ico" alt="DuckDuckGo logo" />
+        <h2>DuckDuckGo</h2>
+        <a class="go-btn" href="https://duckduckgo.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://yastatic.net/s3/home-static/_/a/3/2/2/2322b1b2b1b2b1b2b1b2b1b2b1b2b1b2.ico" alt="Yandex logo" />
+        <h2>Yandex</h2>
+        <a class="go-btn" href="https://yandex.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.startpage.com/favicon.ico" alt="Startpage logo" />
+        <h2>Startpage</h2>
+        <a class="go-btn" href="https://www.startpage.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.ecosia.org/favicon.ico" alt="Ecosia logo" />
+        <h2>Ecosia</h2>
+        <a class="go-btn" href="https://www.ecosia.org" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.ask.com/favicon.ico" alt="Ask logo" />
+        <h2>Ask</h2>
+        <a class="go-btn" href="https://www.ask.com" target="_blank">Come</a>
+      </article>
+      <!-- 📱 Social Media -->
+      <article class="card">
+        <img class="app-logo" src="https://static.xx.fbcdn.net/rsrc.php/yo/r/iRmz9lCMBD2.ico" alt="Facebook logo" />
+        <h2>Facebook</h2>
+        <a class="go-btn" href="https://www.facebook.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt="Instagram logo" />
+        <h2>Instagram</h2>
+        <a class="go-btn" href="https://www.instagram.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://x.com/favicon.ico" alt="X (Twitter) logo" />
+        <h2>X (Twitter)</h2>
+        <a class="go-btn" href="https://x.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.linkedin.com/favicon.ico" alt="LinkedIn logo" />
+        <h2>LinkedIn</h2>
+        <a class="go-btn" href="https://www.linkedin.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.snapchat.com/favicon.ico" alt="Snapchat logo" />
+        <h2>Snapchat</h2>
+        <a class="go-btn" href="https://www.snapchat.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.pinterest.com/favicon.ico" alt="Pinterest logo" />
+        <h2>Pinterest</h2>
+        <a class="go-btn" href="https://www.pinterest.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.reddit.com/favicon.ico" alt="Reddit logo" />
+        <h2>Reddit</h2>
+        <a class="go-btn" href="https://www.reddit.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.tumblr.com/favicon.ico" alt="Tumblr logo" />
+        <h2>Tumblr</h2>
+        <a class="go-btn" href="https://www.tumblr.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.quora.com/favicon.ico" alt="Quora logo" />
+        <h2>Quora</h2>
+        <a class="go-btn" href="https://www.quora.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://static.cdninstagram.com/threads/favicon.ico" alt="Threads logo" />
+        <h2>Threads</h2>
+        <a class="go-btn" href="https://www.threads.net" target="_blank">Come</a>
+      </article>
+      <!-- 🎥 Video Platforms -->
+      <article class="card">
+        <img class="app-logo" src="https://www.youtube.com/s/desktop/6e8e2e5d/img/favicon_144x144.png" alt="YouTube logo" />
+        <h2>YouTube</h2>
+        <a class="go-btn" href="https://www.youtube.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.netflix.com/favicon.ico" alt="Netflix logo" />
+        <h2>Netflix</h2>
+        <a class="go-btn" href="https://www.netflix.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.primevideo.com/favicon.ico" alt="Amazon Prime Video logo" />
+        <h2>Amazon Prime Video</h2>
+        <a class="go-btn" href="https://www.primevideo.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.hotstar.com/favicon.ico" alt="Hotstar logo" />
+        <h2>Hotstar / Disney+</h2>
+        <a class="go-btn" href="https://www.hotstar.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.zee5.com/favicon.ico" alt="Zee5 logo" />
+        <h2>Zee5</h2>
+        <a class="go-btn" href="https://www.zee5.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.sonyliv.com/favicon.ico" alt="SonyLIV logo" />
+        <h2>SonyLIV</h2>
+        <a class="go-btn" href="https://www.sonyliv.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.jiocinema.com/favicon.ico" alt="JioCinema logo" />
+        <h2>JioCinema</h2>
+        <a class="go-btn" href="https://www.jiocinema.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://vimeo.com/favicon.ico" alt="Vimeo logo" />
+        <h2>Vimeo</h2>
+        <a class="go-btn" href="https://vimeo.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.twitch.tv/favicon.ico" alt="Twitch logo" />
+        <h2>Twitch</h2>
+        <a class="go-btn" href="https://www.twitch.tv" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.mxplayer.in/favicon.ico" alt="MX Player logo" />
+        <h2>MX Player</h2>
+        <a class="go-btn" href="https://www.mxplayer.in" target="_blank">Come</a>
+      </article>
+      <!-- 🛍️ Shopping -->
+      <article class="card">
+        <img class="app-logo" src="https://www.amazon.in/favicon.ico" alt="Amazon logo" />
+        <h2>Amazon</h2>
+        <a class="go-btn" href="https://www.amazon.in" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.flipkart.com/favicon.ico" alt="Flipkart logo" />
+        <h2>Flipkart</h2>
+        <a class="go-btn" href="https://www.flipkart.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.meesho.com/favicon.ico" alt="Meesho logo" />
+        <h2>Meesho</h2>
+        <a class="go-btn" href="https://www.meesho.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.snapdeal.com/favicon.ico" alt="Snapdeal logo" />
+        <h2>Snapdeal</h2>
+        <a class="go-btn" href="https://www.snapdeal.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.myntra.com/favicon.ico" alt="Myntra logo" />
+        <h2>Myntra</h2>
+        <a class="go-btn" href="https://www.myntra.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.ajio.com/favicon.ico" alt="Ajio logo" />
+        <h2>Ajio</h2>
+        <a class="go-btn" href="https://www.ajio.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.nykaa.com/favicon.ico" alt="Nykaa logo" />
+        <h2>Nykaa</h2>
+        <a class="go-btn" href="https://www.nykaa.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.shopify.com/favicon.ico" alt="Shopify logo" />
+        <h2>Shopify</h2>
+        <a class="go-btn" href="https://www.shopify.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.etsy.com/favicon.ico" alt="Etsy logo" />
+        <h2>Etsy</h2>
+        <a class="go-btn" href="https://www.etsy.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.ebay.com/favicon.ico" alt="eBay logo" />
+        <h2>eBay</h2>
+        <a class="go-btn" href="https://www.ebay.com" target="_blank">Come</a>
+      </article>
+      <!-- 📚 Learning / Study -->
+      <article class="card">
+        <img class="app-logo" src="https://www.wikipedia.org/static/favicon/wikipedia.ico" alt="Wikipedia logo" />
+        <h2>Wikipedia</h2>
+        <a class="go-btn" href="https://www.wikipedia.org" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.khanacademy.org/favicon.ico" alt="Khan Academy logo" />
+        <h2>Khan Academy</h2>
+        <a class="go-btn" href="https://www.khanacademy.org" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.coursera.org/favicon.ico" alt="Coursera logo" />
+        <h2>Coursera</h2>
+        <a class="go-btn" href="https://www.coursera.org" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.udemy.com/staticx/udemy/images/v7/favicon-32x32.png" alt="Udemy logo" />
+        <h2>Udemy</h2>
+        <a class="go-btn" href="https://www.udemy.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.edx.org/favicon.ico" alt="edX logo" />
+        <h2>edX</h2>
+        <a class="go-btn" href="https://www.edx.org" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://unacademy.com/favicon.ico" alt="Unacademy logo" />
+        <h2>Unacademy</h2>
+        <a class="go-btn" href="https://unacademy.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://byjus.com/favicon.ico" alt="Byju’s logo" />
+        <h2>Byju’s</h2>
+        <a class="go-btn" href="https://byjus.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.chegg.com/favicon.ico" alt="Chegg logo" />
+        <h2>Chegg</h2>
+        <a class="go-btn" href="https://www.chegg.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.studypool.com/favicon.ico" alt="StudyPool logo" />
+        <h2>StudyPool</h2>
+        <a class="go-btn" href="https://www.studypool.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.brainly.in/favicon.ico" alt="Brainly logo" />
+        <h2>Brainly</h2>
+        <a class="go-btn" href="https://www.brainly.in" target="_blank">Come</a>
+      </article>
+      <!-- 📰 News & Media -->
+      <article class="card">
+        <img class="app-logo" src="https://www.bbc.com/favicon.ico" alt="BBC logo" />
+        <h2>BBC</h2>
+        <a class="go-btn" href="https://www.bbc.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://edition.cnn.com/favicon.ico" alt="CNN logo" />
+        <h2>CNN</h2>
+        <a class="go-btn" href="https://edition.cnn.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.ndtv.com/favicon.ico" alt="NDTV logo" />
+        <h2>NDTV</h2>
+        <a class="go-btn" href="https://www.ndtv.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://timesofindia.indiatimes.com/favicon.ico" alt="Times of India logo" />
+        <h2>Times of India</h2>
+        <a class="go-btn" href="https://timesofindia.indiatimes.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.hindustantimes.com/favicon.ico" alt="Hindustan Times logo" />
+        <h2>Hindustan Times</h2>
+        <a class="go-btn" href="https://www.hindustantimes.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.thehindu.com/favicon.ico" alt="The Hindu logo" />
+        <h2>The Hindu</h2>
+        <a class="go-btn" href="https://www.thehindu.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.indiatoday.in/favicon.ico" alt="India Today logo" />
+        <h2>India Today</h2>
+        <a class="go-btn" href="https://www.indiatoday.in" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.livemint.com/favicon.ico" alt="LiveMint logo" />
+        <h2>LiveMint</h2>
+        <a class="go-btn" href="https://www.livemint.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://news.abplive.com/favicon.ico" alt="ABP News logo" />
+        <h2>ABP News</h2>
+        <a class="go-btn" href="https://news.abplive.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://zeenews.india.com/favicon.ico" alt="Zee News logo" />
+        <h2>Zee News</h2>
+        <a class="go-btn" href="https://zeenews.india.com" target="_blank">Come</a>
+      </article>
+      <!-- 💬 Chat & Messaging -->
+      <article class="card">
+        <img class="app-logo" src="https://web.whatsapp.com/favicon.ico" alt="WhatsApp Web logo" />
+        <h2>WhatsApp Web</h2>
+        <a class="go-btn" href="https://web.whatsapp.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://web.telegram.org/favicon.ico" alt="Telegram logo" />
+        <h2>Telegram</h2>
+        <a class="go-btn" href="https://web.telegram.org" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.messenger.com/favicon.ico" alt="Messenger logo" />
+        <h2>Messenger</h2>
+        <a class="go-btn" href="https://www.messenger.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://signal.org/assets/presskit/favicon.ico" alt="Signal logo" />
+        <h2>Signal</h2>
+        <a class="go-btn" href="https://signal.org" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://discord.com/favicon.ico" alt="Discord logo" />
+        <h2>Discord</h2>
+        <a class="go-btn" href="https://discord.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://slack.com/favicon.ico" alt="Slack logo" />
+        <h2>Slack</h2>
+        <a class="go-btn" href="https://slack.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.skype.com/favicon.ico" alt="Skype logo" />
+        <h2>Skype</h2>
+        <a class="go-btn" href="https://www.skype.com" target="_blank">Come</a>
+      </article>
+      <!-- 📈 Finance / Banking -->
+      <article class="card">
+        <img class="app-logo" src="https://pay.google.com/about/static/images/favicon.ico" alt="Google Pay logo" />
+        <h2>Google Pay</h2>
+        <a class="go-btn" href="https://pay.google.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.phonepe.com/favicon.ico" alt="PhonePe logo" />
+        <h2>PhonePe</h2>
+        <a class="go-btn" href="https://www.phonepe.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://paytm.com/favicon.ico" alt="Paytm logo" />
+        <h2>Paytm</h2>
+        <a class="go-btn" href="https://paytm.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.bhimupi.org.in/favicon.ico" alt="BHIM logo" />
+        <h2>BHIM</h2>
+        <a class="go-btn" href="https://www.bhimupi.org.in" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.onlinesbi.sbi/favicon.ico" alt="SBI Online logo" />
+        <h2>SBI Online</h2>
+        <a class="go-btn" href="https://www.onlinesbi.sbi" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.hdfcbank.com/favicon.ico" alt="HDFC Bank logo" />
+        <h2>HDFC Bank</h2>
+        <a class="go-btn" href="https://www.hdfcbank.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.axisbank.com/favicon.ico" alt="Axis Bank logo" />
+        <h2>Axis Bank</h2>
+        <a class="go-btn" href="https://www.axisbank.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.icicibank.com/favicon.ico" alt="ICICI Bank logo" />
+        <h2>ICICI Bank</h2>
+        <a class="go-btn" href="https://www.icicibank.com" target="_blank">Come</a>
+      </article>
+      <!-- 🧰 Utilities & Tools -->
+      <article class="card">
+        <img class="app-logo" src="https://www.canva.com/favicon.ico" alt="Canva logo" />
+        <h2>Canva</h2>
+        <a class="go-btn" href="https://www.canva.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.remove.bg/favicon.ico" alt="Remove.bg logo" />
+        <h2>Remove.bg</h2>
+        <a class="go-btn" href="https://www.remove.bg" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://pixlr.com/favicon.ico" alt="Pixlr logo" />
+        <h2>Pixlr</h2>
+        <a class="go-btn" href="https://pixlr.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://smallpdf.com/favicon.ico" alt="SmallPDF logo" />
+        <h2>SmallPDF</h2>
+        <a class="go-btn" href="https://smallpdf.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.pdfescape.com/favicon.ico" alt="PDFescape logo" />
+        <h2>PDFescape</h2>
+        <a class="go-btn" href="https://www.pdfescape.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.ilovepdf.com/img/favicons/favicon-32x32.png" alt="ILovePDF logo" />
+        <h2>ILovePDF</h2>
+        <a class="go-btn" href="https://www.ilovepdf.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://tinyurl.com/favicon.ico" alt="TinyURL logo" />
+        <h2>TinyURL</h2>
+        <a class="go-btn" href="https://tinyurl.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://bitly.com/favicon.ico" alt="Bitly logo" />
+        <h2>Bitly</h2>
+        <a class="go-btn" href="https://bitly.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.google.com/favicon.ico" alt="Google logo" />
+        <h2>Google</h2>
+        <a class="go-btn" href="https://www.google.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.youtube.com/s/desktop/6e8e2e5d/img/favicon_144x144.png" alt="YouTube logo" />
+        <h2>YouTube</h2>
+        <a class="go-btn" href="https://www.youtube.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://static.xx.fbcdn.net/rsrc.php/yo/r/iRmz9lCMBD2.ico" alt="Facebook logo" />
+        <h2>Facebook</h2>
+        <a class="go-btn" href="https://www.facebook.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt="Instagram logo" />
+        <h2>Instagram</h2>
+        <a class="go-btn" href="https://www.instagram.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://web.whatsapp.com/favicon.ico" alt="WhatsApp logo" />
+        <h2>WhatsApp</h2>
+        <a class="go-btn" href="https://web.whatsapp.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://x.com/favicon.ico" alt="X (Twitter) logo" />
+        <h2>X (Twitter)</h2>
+        <a class="go-btn" href="https://x.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.linkedin.com/favicon.ico" alt="LinkedIn logo" />
+        <h2>LinkedIn</h2>
+        <a class="go-btn" href="https://www.linkedin.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://mail.google.com/favicon.ico" alt="Gmail logo" />
+        <h2>Gmail</h2>
+        <a class="go-btn" href="https://mail.google.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.amazon.in/favicon.ico" alt="Amazon logo" />
+        <h2>Amazon</h2>
+        <a class="go-btn" href="https://www.amazon.in" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.netflix.com/favicon.ico" alt="Netflix logo" />
+        <h2>Netflix</h2>
+        <a class="go-btn" href="https://www.netflix.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.reddit.com/favicon.ico" alt="Reddit logo" />
+        <h2>Reddit</h2>
+        <a class="go-btn" href="https://www.reddit.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.tiktok.com/favicon.ico" alt="TikTok logo" />
+        <h2>TikTok</h2>
+        <a class="go-btn" href="https://www.tiktok.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://open.spotify.com/favicon.ico" alt="Spotify logo" />
+        <h2>Spotify</h2>
+        <a class="go-btn" href="https://open.spotify.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://zoom.us/favicon.ico" alt="Zoom logo" />
+        <h2>Zoom</h2>
+        <a class="go-btn" href="https://zoom.us" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://slack.com/favicon.ico" alt="Slack logo" />
+        <h2>Slack</h2>
+        <a class="go-btn" href="https://slack.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://teams.microsoft.com/favicon.ico" alt="Microsoft Teams logo" />
+        <h2>Microsoft Teams</h2>
+        <a class="go-btn" href="https://teams.microsoft.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://trello.com/favicon.ico" alt="Trello logo" />
+        <h2>Trello</h2>
+        <a class="go-btn" href="https://trello.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://www.dropbox.com/favicon.ico" alt="Dropbox logo" />
+        <h2>Dropbox</h2>
+        <a class="go-btn" href="https://www.dropbox.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://drive.google.com/favicon.ico" alt="Google Drive logo" />
+        <h2>Google Drive</h2>
+        <a class="go-btn" href="https://drive.google.com" target="_blank">Come</a>
+      </article>
+      <article class="card">
+        <img class="app-logo" src="https://onedrive.live.com/favicon.ico" alt="OneDrive logo" />
+        <h2>OneDrive</h2>
+        <a class="go-btn" href="https://onedrive.live.com" target="_blank">Come</a>
+      </article>
+      <!-- ...500 तक ऐसे ही कार्ड्स ऐड किए जा सकते हैं... -->
+      
+    </section>
+  </main>
+
+  <footer>
+    <div class="donation-box">
+  <p>
+    🙏 This is my first website. If you like it, please consider supporting me with a small donation.<br>
+    (🙏 यह मेरी पहली वेबसाइट है। अगर आपको पसंद आई हो, तो कृपया मुझे थोड़ा सहयोग देने पर विचार करें।)
+  </p>
+
+  <p>
+    I'm still learning, so please forgive any mistakes.<br>
+    (मैं अभी भी सीख रहा हूँ, इसलिए कृपया मेरी किसी भी गलती को माफ़ कर दें।)
+  </p>
+
+  <p>
+    💸 UPI ID: <strong style="color:#d32f2f;">7508017231@fam</strong>
+  </p>
+
+  <button onclick="copyUPI()">📋 Copy UPI ID</button>
+  <p id="copyMsg" style="color:green;display:none;">✅ UPI ID copied!</p>
+</div>
+
+    © <span id="year"></span> Official Website | All rights reserved.<br>
+    <span style="font-size:1.05em;color:#4caf50;font-weight:600;">Support my career: UPI - <span style="background:#e0f7fa;padding:2px 8px;border-radius:6px;color:#222;">7508017231@fam</span></span>
+  </footer>
+
+  <script src="sacript.js"></script>
+  <script>
+    function handleGoogleLogin(response) {
+      // You get JWT credential in response. For demo, just show main content
+      document.getElementById('loginModal').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'block';
+      // You can decode response.credential for user info if needed
+    }
+  </script>
+</body>
+</html>
